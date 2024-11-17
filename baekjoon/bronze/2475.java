@@ -5,13 +5,14 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
-        int number = Integer.parseInt(br.readLine());
-        String result = "";
+        String[] inputs = br.readLine().split(" ");
+        int result = 0;
 
-        for (int i=0; i<number; i++){
-            result += "*";
-            System.out.println(result);
+        for (int i=0; i<5; i++){
+            int num = Integer.parseInt(inputs[i]);
+            result += num*num;
         }
+        System.out.println(result%10);
         br.close();
 
     }
