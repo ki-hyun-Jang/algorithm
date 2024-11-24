@@ -38,3 +38,21 @@
 33. [3052](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/3052.java) - 나머지  
 34. [8958](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/8958.java) - OX퀴즈  
 35. [10809](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/10809.java) - 알파벳 찾기  
+36. [4153](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/4153.java) - 직각삼각형  
+37. [30802](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/30802.java) - 웰컴 키트  
+38. [1978](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/1978.java) - 소수 찾기  
+39. [2231](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2231.java) - 분해합  
+40. [2292](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2292.java) - 벌집  
+41. [2798](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2798.java) - 블랙잭  
+42. [15829](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/15829.java) - Hashing  
+43. [1259](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/1259.java) - 팰린드롬수  
+44. [1546](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/1546.java) - 평균  
+45. [2609](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2609.java) - 최대공약수와 최소공배수  
+46. [2775](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2775.java) - 부녀회장이 될테야  
+47. [2869](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/2869.java) - 달팽이는 올라가고 싶다  
+48. [10989](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/10989.java) - 수 정렬하기 3  
+49. [11050](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/bronze/11050.java) - 이항 계수 1  
+
+## Silver
+1. [1181](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/silver/1181.java) - 단어 정렬  
+2. [1436](https://github.com/ki-hyun-Jang/algorithm/blob/main/baekjoon/silver/1436.java) - 영화감독 숌  
