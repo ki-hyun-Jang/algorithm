@@ -1,55 +1,65 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String quack  = br.readLine();
-        int answer = 0;
-        int[] arr = new int[5];
-        for(int i = 0; i<quack.length(); i++){
-            if(quack.charAt(i)=='q'){
-                arr[0] += 1;
-            }else if (quack.charAt(i)=='u'){
-                arr[1] += 1;
-            }else if (quack.charAt(i)=='a'){
-                arr[2] += 1;
-            }else if (quack.charAt(i)=='c'){
-                arr[3] += 1;
-            }else {
-                arr[4] += 1;
-            }
-            if(!check(arr)) {
+        String sound = br.readLine();
+
+        // "quack"의 순서: q=0, u=1, a=2, c=3, k=4
+        int[] counts = new int[5]; // 각 문자 상태를 관리
+        int ducks = 0; // 동시에 소리를 내는 오리 수
+        int maxDucks = 0; // 최대 오리 수
+
+        for (char ch : sound.toCharArray()) {
+            if (ch == 'q') { // 새로운 소리 시작
+                counts[0]++;
+                ducks++;
+                maxDucks = Math.max(maxDucks, ducks);
+            } else if (ch == 'u') {
+                if (counts[0] > 0) {
+                    counts[0]--;
+                    counts[1]++;
+                } else {
+                    System.out.println(-1);
+                    return;
+                }
+            } else if (ch == 'a') {
+                if (counts[1] > 0) {
+                    counts[1]--;
+                    counts[2]++;
+                } else {
+                    System.out.println(-1);
+                    return;
+                }
+            } else if (ch == 'c') {
+                if (counts[2] > 0) {
+                    counts[2]--;
+                    counts[3]++;
+                } else {
+                    System.out.println(-1);
+                    return;
+                }
+            } else if (ch == 'k') {
+                if (counts[3] > 0) {
+                    counts[3]--;
+                    ducks--; // 소리 끝났으므로 오리 수 감소
+                } else {
+                    System.out.println(-1);
+                    return;
+                }
+            } else {
+                // 잘못된 문자 입력
                 System.out.println(-1);
                 return;
             }
-            answer = Math.max(count(arr),answer);
         }
-        if(!Arrays.equals(arr, new int[]{0, 0, 0, 0, 0})) answer = -1;
-        System.out.println(answer);
-    }
 
-    public static boolean check(int[] arr){
-        for (int i = 1; i<5; i++){
-            if (arr[i-1] <arr[i]) {
-                return false;
-            }
+        // 모든 소리가 "k"로 끝났는지 확인
+        if (ducks == 0) {
+            System.out.println(maxDucks);
+        } else {
+            System.out.println(-1);
         }
-        return true;
-    }
-    public static int count(int[] arr){
-        int cnt = 0;
-        int min = 2500;
-        int max = 0;
-        for (int i = 0; i<5; i++) {
-            if (arr[i]<min) min=arr[i];
-            if (arr[i]>max) max=arr[i];
-        }
-        if (min>1||max>=min) {
-            cnt = max;
-            for (int i = 0; i<5; i++) {
-                arr[i] -= min;
-            }
-        }
-        return cnt;
     }
 }
